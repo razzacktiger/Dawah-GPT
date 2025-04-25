@@ -6,16 +6,16 @@ We will build a “DawahGPT” prototype: a Retrieval-Augmented Generation (RAG)
 
 ## 2. Objectives
 
-- **Core Functionality**: Retrieve relevant Dawah content and generate faithful, context-aware answers. :contentReference[oaicite:1]{index=1}
-- **Time-to-Prototype**: Deliver a working chat UI and backend within 1–2 weeks. :contentReference[oaicite:2]{index=2}
+- **Core Functionality**: Retrieve relevant Dawah content and generate faithful, context-aware answers.
+- **Time-to-Prototype**: Deliver a working chat UI and backend within 1–2 weeks.
 - **Quality Metrics**: Achieve ≥4/5 human ratings on faithfulness and clarity in initial tests.
 
 ## 3. Data Requirements
 
 - **Sources**:
-  - Sapience Institute articles (HTML/PDF). :contentReference[oaicite:4]{index=4}
+  - Sapience Institute articles (HTML/PDF).
   - IERA Dawah pamphlets and web-posts.
-  - Transcripts from Dawah videos (YouTube). :contentReference[oaicite:5]{index=5}
+  - Transcripts from Dawah videos (YouTube).
 - **Preprocessing**: Clean boilerplate, split into ~500-token chunks, attach metadata (source, date, URL).
 
 ## 4. Architecture
@@ -23,14 +23,14 @@ We will build a “DawahGPT” prototype: a Retrieval-Augmented Generation (RAG)
 - **Vector Store**: Pinecone or Chroma for embedding index.
 - **Embedding Model**: OpenAI Ada-style embeddings (or open-source equivalent).
 - **LLM**: GPT-4 via OpenAI API (or Llama 2 fine-tuned).
-- **Orchestration**: LangChain to chain retrieval → prompt templating → generation. :contentReference[oaicite:7]{index=7}
-- **API Layer**: FastAPI endpoints for chat queries. :contentReference[oaicite:8]{index=8}
+- **Orchestration**: LangChain to chain retrieval → prompt templating → generation.
+- **API Layer**: FastAPI endpoints for chat queries.
 - **Frontend**: Streamlit or Next.js for minimal chat interface.
 
 ## 5. Non-Functional Requirements
 
-- **Latency**: ≤1 s retrieval + ≤2 s LLM response per query. :contentReference[oaicite:10]{index=10}
-- **Scalability**: Containerized via Docker for horizontal scaling. :contentReference[oaicite:11]{index=11}
+- **Latency**: ≤1 s retrieval + ≤2 s LLM response per query.
+- **Scalability**: Containerized via Docker for horizontal scaling.
 - **Logging & Analytics**: Record queries, sources used, user feedback.
 
 ## 6. Evaluation Strategy
